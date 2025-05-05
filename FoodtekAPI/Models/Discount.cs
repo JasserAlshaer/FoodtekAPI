@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Discount : MainEntity
+public partial class Discount
 {
     public int DiscountId { get; set; }
 

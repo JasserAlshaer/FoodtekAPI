@@ -24,7 +24,7 @@ namespace FoodtekAPI.Services
                 TitleEn = d.TitleEn,
                 DescriptionAr=d.DescriptionAr,
                 DescriptionEn=d.DescriptionEn,
-                ImageUrl=d.ImageUrl
+                //ImageUrl=d.
                 // add to discount model
             }).ToList();
 

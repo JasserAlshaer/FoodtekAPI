@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Notification : MainEntity
+public partial class Notification
 {
     public int NotificationId { get; set; }
 

@@ -1,5 +1,5 @@
 ﻿using FoodtekAPI.DTOs.Favorites;
-using FoodtekAPI.Entites;
+
 using FoodtekAPI.Interfaces;
 using FoodtekAPI.Models;
 using Microsoft.AspNetCore.Mvc;

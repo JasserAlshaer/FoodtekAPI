@@ -1,10 +1,12 @@
-﻿using FoodtekAPI.DTOs.ItemSearch.Response;
+﻿using FoodtekAPI.DTOs.Item;
+using FoodtekAPI.DTOs.ItemSearch.Response;
+using FoodtekAPI.Interfaces;
 using FoodtekAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FoodtekAPI.Services
 {
-    public class ItemService
+    public class ItemService : IItem
     {
         private  readonly FoodtekDbContext _foodtekDbContext;
         public  ItemService(FoodtekDbContext foodtekDbContext)
@@ -31,13 +33,34 @@ namespace FoodtekAPI.Services
                     ArabicName = x.Item.ArabicName,
                     EnglishDescription = x.Item.DescriptionEn,
                     ArabicDescription = x.Item.DescriptionAr,
-                    Price = x.Item.Price,
+                    Price = (float)x.Item.Price,
                     Image = x.Item.ImagePath,
                     Rate = x.AverageRate
                 })
                 .ToListAsync();
 
             return topRatedItems;
+        }
+        public async Task<ItemDTO> GetOneItem(int id)
+        {
+            var existing = await _foodtekDbContext.Items.FindAsync(id);
+            if (existing is null)
+                return null;
+
+            var itemDTO = new ItemDTO
+            {
+                NameAr = existing.ArabicName,
+                NameEn = existing.EnglishName,
+                DescriptionAr = existing.DescriptionAr,
+                DescriptionEn = existing.DescriptionEn,
+                Price = Convert.ToSingle(existing.Price)
+            };
+
+            return itemDTO;
+
+
+
+
         }
 
     }

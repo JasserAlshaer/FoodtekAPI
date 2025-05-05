@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Address: MainEntity
+public partial class Address
 {
     public int AddressId { get; set; }
 

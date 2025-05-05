@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Employee : MainEntity
+public partial class Employee
 {
     public int EmployeeId { get; set; }
 

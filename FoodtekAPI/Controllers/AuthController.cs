@@ -22,6 +22,7 @@ namespace FoodtekAPI.Controllers
             _itemService = itemService;
             _getTopRecommendedItemService = getTopRecommendedItemService;
         }
+       
 
         [HttpPost("[action]")]
         // [Route("SignIn")]
@@ -58,7 +59,9 @@ namespace FoodtekAPI.Controllers
                 return StatusCode(500, $"An Error was occured {Ex.Message}");
             }
 
+
         }
+
 
         [HttpPut("[action]")]
         
@@ -87,6 +90,8 @@ namespace FoodtekAPI.Controllers
                 else
                     return StatusCode(404, "No user found with this email");
 
+
+
             }
             catch (Exception ex)
             {
@@ -96,6 +101,7 @@ namespace FoodtekAPI.Controllers
         }
         //[HttpPost]
         [HttpPost("[action]")]
+      
 
         public async Task<IActionResult> Registration([FromBody] RegistrationDTO input)
         {
@@ -124,6 +130,7 @@ namespace FoodtekAPI.Controllers
                     else
                         return StatusCode(404, "failed to create account");
 
+                
                 return StatusCode(404, "failed to create account");
 
             }
@@ -147,7 +154,12 @@ namespace FoodtekAPI.Controllers
             return Ok(result);
         }
 
+
+
     }
 }
+    
+
+
 
    

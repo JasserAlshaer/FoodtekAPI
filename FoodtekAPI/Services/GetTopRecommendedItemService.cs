@@ -33,7 +33,7 @@ namespace FoodtekAPI.Services
                           ArabicName = i.ArabicName,
                           EnglishDescription = i.DescriptionEn,
                           ArabicDescription = i.DescriptionAr,
-                          Price = i.Price,
+                          Price = (float)i.Price,
                           Image = i.ImagePath
                       })
                 .ToListAsync();

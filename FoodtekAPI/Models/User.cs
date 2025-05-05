@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class User : MainEntity
+public partial class User
 {
     public int UserId { get; set; }
 
@@ -23,16 +22,6 @@ public partial class User : MainEntity
     public int UserTypeId { get; set; }
 
     public int StatusId { get; set; }
-
-    public string? OTP { get; set; }
-
-    public DateTime? ExpireOTP { get; set; }
-
-    public bool ?IsVerified { get; set; } = false;
-
-    public bool ?IsLoggedIn { get; set; } = false;
-
-    public DateTime ?LastLoggedIn { get; set; }
 
     public virtual Admin? Admin { get; set; }
 

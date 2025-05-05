@@ -30,6 +30,7 @@
 
             return hasUpper && hasLower && hasDigit && hasSymbole;
         }
+   
 
     public static bool IsValidEmail(string Email)
         {
@@ -67,13 +68,16 @@
         }
         public static bool IsValidatteBirthDate(DateTime BirthDay)
         {
-            int age= DateTime.Now.Year-BirthDay.Year;
-            if (BirthDay > DateTime.Now.AddYears(-age))
+            DateTime now = DateTime.Now;
+            int age=now.Year-BirthDay.Year;
+            if (BirthDay > now.AddYears(-age))
             {
                 age--;
             }
 
             return age >= 16;
+
+
 
         }
         public static bool IsValidPhone(string PhoneNumber)
@@ -89,11 +93,19 @@
             {
                 if (PhoneNumber.StartsWith("+962")&& PhoneNumber.Length == 13)
                     return true;
+
+
             }
             return false;
 
+
         }
 
+
     }
+
+
+
+
 
 }

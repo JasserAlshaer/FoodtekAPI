@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Delivery : MainEntity
+public partial class Delivery
 {
     public int CaptainId { get; set; }
 

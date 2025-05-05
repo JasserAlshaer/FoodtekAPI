@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class Admin: MainEntity
+public partial class Admin
 {
     public int AdminId { get; set; }
 
@@ -18,5 +17,5 @@ public partial class Admin: MainEntity
 
     public virtual User AdminNavigation { get; set; } = null!;
 
-    public virtual Role Role { get; set; } = null!;
+    public virtual LookupItem Role { get; set; } = null!;
 }

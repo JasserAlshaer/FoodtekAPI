@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class RatingsAndReview : MainEntity
+public partial class RatingsAndReview
 {
     public int ReviewId { get; set; }
 

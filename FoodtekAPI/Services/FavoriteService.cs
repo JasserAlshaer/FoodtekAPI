@@ -22,7 +22,7 @@ namespace FoodtekAPI.Services
             {
                 return "User Not Found!";
             }
-            favorite.ItemsID = FavoriteDTO.ItemsID;
+            favorite.ItemId = FavoriteDTO.ItemsID;
             _Context.Update(favorite);
             _Context.SaveChanges();
 
@@ -31,7 +31,7 @@ namespace FoodtekAPI.Services
 
         public async Task<string> RemoveFromFavorite(int itemId)
         {
-            var favorite = _Context.FavoriteItems.Where(c => c.ItemsID == itemId).FirstOrDefault();//
+            var favorite = _Context.FavoriteItems.Where(c => c.ItemId == itemId).FirstOrDefault();//
             if (favorite == null)
             {
                 return "Item does not exist";
@@ -45,3 +45,4 @@ namespace FoodtekAPI.Services
         }
     }
 }
+

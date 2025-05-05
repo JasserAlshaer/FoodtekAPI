@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class OrdersTracking : MainEntity
+public partial class OrdersTracking
 {
     public int TrackingId { get; set; }
 

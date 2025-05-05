@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class PaymentMethod : MainEntity
+public partial class PaymentMethod
 {
     public int PaymentMethodId { get; set; }
 

@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class ReportedIssue : MainEntity
+public partial class ReportedIssue
 {
     public int IssueId { get; set; }
 

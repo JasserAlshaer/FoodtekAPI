@@ -7,7 +7,7 @@
         public string ArabicName { get; set; }
         public string EnglishDescription { get; set; }
         public string ArabicDescription { get; set; }
-        public decimal Price { get; set; }
+        public float Price { get; set; }
         public string Image { get; set; }
 
     }

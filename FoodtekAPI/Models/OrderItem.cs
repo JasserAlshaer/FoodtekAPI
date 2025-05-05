@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class OrderItem : MainEntity
+public partial class OrderItem
 {
     public int OrderId { get; set; }
 

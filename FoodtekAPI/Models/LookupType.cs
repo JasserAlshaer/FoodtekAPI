@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class LookupType : MainEntity
+public partial class LookupType
 {
     public int LookupTypeId { get; set; }
 

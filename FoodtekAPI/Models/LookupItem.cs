@@ -1,10 +1,9 @@
-﻿using FoodtekAPI.Entites;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FoodtekAPI.Models;
 
-public partial class LookupItem : MainEntity
+public partial class LookupItem
 {
     public int LookupItemId { get; set; }
 
@@ -15,6 +14,8 @@ public partial class LookupItem : MainEntity
     public string NameAr { get; set; } = null!;
 
     public bool? IsActive { get; set; }
+
+    public virtual ICollection<Admin> Admins { get; set; } = new List<Admin>();
 
     public virtual ICollection<Delivery> Deliveries { get; set; } = new List<Delivery>();
 
